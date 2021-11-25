@@ -1518,7 +1518,7 @@ namespace webifc
 					auto& ppts = profile.curve.points;
 					for (auto& pt2D : ppts)
 					{
-						glm::dvec3 pt = pt2D.x * left + pt2D.y * right + planeOrigin;
+						glm::dvec3 pt = pt2D.y * left + pt2D.x * right + planeOrigin;
 						glm::dvec3 proj = projectOntoPlane(planeOrigin, planeNormal, pt, directrixSegmentNormal);
 
 						segmentForCurve.Add(pt);
